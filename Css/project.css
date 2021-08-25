@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: rgb(255,210,208);
+    background: linear-gradient(297deg, rgba(255,210,208,1) 0%, rgba(255,0,107,1) 50%, rgba(8,18,98,1) 100%);
+}
+
+nav{
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    background-color: transparent;
+    top: 0%;
+    transition: .25s;
+    background-color: white;
+    z-index: 2;
+}
+nav #logo{
+    width: 4vw;
+    padding: 14px 5vw;
+}
+nav #close{
+    background-color: transparent;
+    border-color: transparent;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+nav #close img{
+    width: 4vw;
+    padding: 16px 5vw;
+}
+nav #toggle{
+    background-color: transparent;
+    border-color: transparent;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+nav #toggle img{
+    width: 4vw;
+    padding: 16px 5vw;
+}
+nav .link-container{
+    padding: 0 5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+nav .link-container li{
+    width: 10vw;
+    list-style-type: none;
+    font-size: 1.8vw;
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    transition: .25s;
+}
+nav .link-container li:hover, nav .link-container li.active{
+    color: tomato;
+    border-bottom: .3vw solid tomato;
+}
+nav .link-container li a{
+    text-decoration: none;
+    color: inherit;
+}
+nav .link-container li a:hover{
+    color: inherit;
+}
+nav .link-container li .dropdown{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    padding: .5vw 0;
+    transition: .5s;
+}
+nav .link-container li .dropdown a{
+    display: block;
+    text-decoration: none;
+    padding: .5vw .5rem;
+    z-index: 1;
+}
+nav .link-container li .dropdown a:hover{
+    color: tomato;
+    text-shadow: 0px 0px 30px tomato;
+    background-color: whitesmoke;
+}
+nav .link-container #about:hover .dropdown{
+    display: block;
+}
+nav .link-container #about{
+    cursor: pointer;
+}
+.cont-contianer{
+    display: flex;
+    justify-content: center;
+}
+.container{
+    display: inline-block;
+    white-space: nowrap;
+    overflow-x:scroll;
+    overflow-y: hidden;
+    width: 90%;
+}
+.container .left, .container .right{
+    opacity: 0.6;
+    z-index: -1;
+}
+.container .left{
+    transform: translate(calc(10%), -1%);
+}
+.container .right{
+    transform: translate(calc(-10%), -1%);
+}
+.card{
+    display: inline-flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: whitesmoke;
+    margin: 2rem 5vw;
+    border-radius: 25px;
+    white-space: normal;
+    width: 40vw;
+    height: 50vw;
+}
+.card.active{
+    box-shadow: 0px 0px 50px white;
+}
+.card .head{
+    font-size: 2.5vw;
+    padding: 1rem 1rem;
+}
+.card .img{
+    padding: 1rem 2rem;
+}
+.card .img img{
+    width: 30vw;
+    border-radius: 25px;
+}
+.card .details{
+    font-size: 2vw;
+    padding: 1rem;
+    text-align: center;
+}
+.card .card-footer{
+    bottom: 1vw;
+    position: relative;
+    transition: .75s;
+}
+.card .card-footer img{
+    width: 30px;
+    transition: inherit;
+}
+.card .card-footer:hover{
+    transform: rotate(-90deg);
+}
+.card .card-footer:hover img{
+    width: 60px;
+}
+
+.footer{
+    background-color: #23232e;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.footer .footer-container{
+    padding: 1rem 0;
+}
+.footer .footer-container .footer-icon{
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    padding: .5rem 0;
+}
+.footer .footer-container .footer-icon img{
+    width: 30px;
+    height: 30px;
+}
+.footer .footer-container .copy-right{
+    color: white;
+    text-align: center;
+    padding: .5rem 0;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    nav #logo{
+        width: 60px;
+        padding: 14px 5vw;
+    }
+    nav #close{
+        background-color: transparent;
+        border-color: transparent;
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    nav #close img{
+        width: 50px;
+        padding: 16px 5vw;
+    }
+    nav #toggle{
+        background-color: transparent;
+        border-color: transparent;
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    nav #toggle img{
+        width: 50px;
+        padding: 16px 5vw;
+    }
+    nav .link-container{
+        padding: 0 5vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer{
+        background-color: #23232e;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .footer .footer-container{
+        padding: 1rem 0;
+    }
+    .footer .footer-container .footer-icon{
+        display: flex;
+        flex-direction: row;
+        width: 200px;
+        margin: 0 auto;
+        justify-content: space-evenly;
+        padding: .5rem 0;
+    }
+    .footer .footer-container .footer-icon img{
+        width: 30px;
+        height: 30px;
+    }
+    .footer .footer-container .copy-right{
+        color: white;
+        text-align: center;
+        padding: .5rem 0;
+    }
+}
+@media only screen and (max-width: 800px){
+    nav{
+        flex-direction: column;
+    }
+    nav #logo{
+        width: 60px;
+        padding: 14px 5vw;
+    }
+    nav #close{
+        background-color: transparent;
+        border-color: transparent;
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    nav #close img{
+        width: 50px;
+        padding: 16px 5vw;
+    }
+    nav #toggle{
+        background-color: transparent;
+        border-color: transparent;
+        display: initial;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    nav #toggle img{
+        width: 50px;
+        padding: 16px 5vw;
+    }
+    nav .link-container{
+        padding: 0 5vw 1rem;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 1s;
+    }
+    nav .link-container li{
+        width: 25vw;
+        list-style-type: none;
+        font-size: 5vw;
+        text-align: center;
+        align-self: center;
+        justify-self: center;
+        transition: .25s;
+    }
+    nav .link-container li:hover, nav .link-container li.active{
+        color: tomato;
+        border-bottom: .3vw solid tomato;
+    }
+    nav .link-container li a{
+        text-decoration: none;
+        color: inherit;
+    }
+    nav .link-container li a:hover{
+        color: inherit;
+    }
+    nav .link-container li .dropdown{
+        display: none;
+        position: relative;
+        z-index: 10;
+        background-color: white;
+        padding: .5vw 0;
+        transition: .5s;
+    }
+    nav .link-container li .dropdown a{
+        display: block;
+        text-decoration: none;
+        padding: .5vw .5rem;
+        z-index: 10;
+        color: black;
+    }
+    nav .link-container li .dropdown a:hover{
+        color: tomato;
+        text-shadow: 0px 0px 30px tomato;
+        background-color: whitesmoke;
+    }
+    nav .link-container #about:hover .dropdown{
+        display: flex;
+        flex-direction: column; 
+        font-size: 3.5vw;
+    }
+    nav .link-container #about{
+        cursor: pointer;
+        height: 6vw;
+        transition: .5s;
+        overflow: hidden;
+    }
+    nav .link-container #about:hover{
+        height: 18vw;
+    }
+}
+@media only screen and (max-width: 500px) {
+    nav{
+        flex-direction: column;
+    }
+    nav #logo{
+        width: 60px;
+        padding: 14px 5vw;
+    }
+    nav #close{
+        background-color: transparent;
+        border-color: transparent;
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    nav #close img{
+        width: 50px;
+        padding: 16px 5vw;
+    }
+    nav #toggle{
+        background-color: transparent;
+        border-color: transparent;
+        display: initial;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    nav #toggle img{
+        width: 50px;
+        padding: 16px 5vw;
+    }
+    nav .link-container{
+        padding: 0 5vw 1rem;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 1s;
+    }
+    nav .link-container li{
+        width: 25vw;
+        list-style-type: none;
+        font-size: 5vw;
+        text-align: center;
+        align-self: center;
+        justify-self: center;
+        transition: .25s;
+    }
+    nav .link-container li:hover, nav .link-container li.active{
+        color: tomato;
+        border-bottom: .3vw solid tomato;
+    }
+    nav .link-container li a{
+        text-decoration: none;
+        color: inherit;
+    }
+    nav .link-container li a:hover{
+        color: inherit;
+    }
+    nav .link-container li .dropdown{
+        display: none;
+        position: relative;
+        z-index: 10;
+        background-color: white;
+        padding: .5vw 0;
+        transition: .5s;
+    }
+    nav .link-container li .dropdown a{
+        display: block;
+        text-decoration: none;
+        padding: .5vw .5rem;
+        z-index: 10;
+        color: black;
+    }
+    nav .link-container li .dropdown a:hover{
+        color: tomato;
+        text-shadow: 0px 0px 30px tomato;
+        background-color: whitesmoke;
+    }
+    nav .link-container #about:hover .dropdown{
+        display: flex;
+        flex-direction: column; 
+        font-size: 3.5vw;
+    }
+    nav .link-container #about{
+        cursor: pointer;
+        height: 6vw;
+        transition: .5s;
+        overflow: hidden;
+    }
+    nav .link-container #about:hover{
+        height: 18vw;
+    }
+
+    .footer{
+        background-color: #23232e;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .footer .footer-container{
+        padding: 1rem 0;
+    }
+    .footer .footer-container .footer-icon{
+        display: flex;
+        flex-direction: row;
+        width: 200px;
+        margin: 0 auto;
+        justify-content: space-evenly;
+        padding: .5rem 0;
+    }
+    .footer .footer-container .footer-icon img{
+        width: 30px;
+        height: 30px;
+    }
+    .footer .footer-container .copy-right{
+        color: white;
+        text-align: center;
+        padding: .5rem 0;
+    }
+}
