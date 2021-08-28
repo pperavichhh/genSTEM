@@ -111,24 +111,16 @@ nav .link-container #about{
     justify-content: center;
 }
 .container{
-    display: inline-block;
-    white-space: nowrap;
-    overflow-x:scroll;
-    overflow-y: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
     width: 90%;
 }
 .container .left, .container .right{
     opacity: 0.6;
     z-index: -1;
 }
-.container .left{
-    transform: translate(calc(10%), -1%);
-}
-.container .right{
-    transform: translate(calc(-10%), -1%);
-}
 .card{
-    display: inline-flex;
+    display: flex;
     position: relative;
     flex-direction: column;
     justify-content: space-around;
@@ -137,25 +129,31 @@ nav .link-container #about{
     margin: 2rem 5vw;
     border-radius: 25px;
     white-space: normal;
-    width: 40vw;
+    width: 35vw;
     height: 50vw;
-}
-.card.active{
+    text-align: center;
     box-shadow: 0px 0px 50px white;
+    transition: 1s;
 }
 .card .head{
-    font-size: 2.5vw;
-    padding: 1rem 1rem;
+    font-size: 2vw;
+    padding: 1rem 1rem;;
 }
-.card .img{
+.card .details-container{
+    display: flex;
+    flex-direction: column;
+}
+.card .details-container .img{
     padding: 1rem 2rem;
+    position: relative;
 }
-.card .img img{
+.card .details-container .img img{
     width: 30vw;
     border-radius: 25px;
+    position: relative;
 }
-.card .details{
-    font-size: 2vw;
+.card .details-container .details{
+    font-size: 1.5vw;
     padding: 1rem;
     text-align: center;
 }
@@ -173,6 +171,23 @@ nav .link-container #about{
 }
 .card .card-footer:hover img{
     width: 60px;
+}
+.card .card-footer.active:hover{
+    transform: rotate(90deg);
+}
+.card.active{
+    grid-column: span 2;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    transition: 1s;
+}
+.card .details-container.active{
+    display: flex;
+    flex-direction: row;
+}
+.card .details-container .details.active{
+    align-self: center;
 }
 
 .footer{
