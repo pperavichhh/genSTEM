@@ -1,0 +1,249 @@
+﻿h1 {
+  font-size: 3rem;
+}
+ul {
+  list-style: none;
+}
+.flex-row {
+  display: flex;
+  flex-flow: row;
+  position: relative;
+  width: 100%;
+}
+.flex-col {
+  display: flex;
+  flex-flow: column;
+  position: relative;
+  width: 100%;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.img-round {
+  position: relative;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.problems {
+  padding: 0 17% 20rem;
+  gap: 3rem;
+}
+.problems-info {
+  justify-content: space-between;
+}
+.problems-statement {
+  width: 60%;
+  gap: 1.5rem;
+}
+.problems .problems-num {
+  width: 20%;
+  gap: 4rem;
+}
+.problems-num > div {
+  gap: 1rem;
+  text-align: center;
+}
+.problems-num > div > p:nth-child(1) {
+  font-size: 3rem;
+}
+.problems-sources {
+  gap: 0 0.5rem;
+}
+.problems-sources a:link, .problems-sources a:visited{
+  display: contents;
+  color: inherit;
+}
+
+.goals {
+  padding: 0 17% 20rem;
+  gap: 3rem;
+}
+.goals h1 {
+  text-align: right;
+}
+.goals-statement {
+  width: 50%;
+  gap: 1.5rem;
+  text-align: right;
+}
+.goals .problems-num {
+  width: 30%;
+  justify-content: space-between;
+}
+.goals .problems-num > div {
+  width: 47%;
+}
+
+.mission {
+  padding: 0 25% 2rem;
+  gap: 6rem;
+}
+.mission h1 {
+  font-size: 4rem;
+  text-align: center;
+}
+.mission-quote {
+  align-items: center;
+  gap: 3rem;
+}
+.mission-quote span:nth-child(odd) {
+  width: 118%;
+  font-size: 2.5rem;
+  color: #adadad;
+}
+.mission-quote span:nth-child(2) {
+  width: 40%;
+  text-align: center;
+  font-size: 2rem;
+}
+.mission-section {
+  width: 20%;
+  gap: 4rem;
+}
+.mission-section > div {
+  gap: 1rem;
+}
+
+
+
+@media only screen and (max-width: 1120px) {
+  .problems, .goals {
+    padding: 0 10% 12rem;
+  }
+  .problems .problems-num {
+    gap: 2rem;
+  }
+  .mission {
+    padding: 0 18% 2rem;
+  }
+}
+
+@media only screen and (max-width: 920px) {
+  .problems, .goals {
+    padding: 0 13% 12rem;
+    gap: 4rem;
+  }
+  .problems h1, .goals h1 {
+    text-align: center;
+  }
+  .problems-info {
+    align-items: center;
+    gap: 3rem;
+  }
+  .problems-statement, .goals-statement {
+    width: 100%;
+    text-align: left;
+  }
+  .problems .problems-num {
+    width: 60%;
+    align-items: flex-end;
+    gap: 3rem;
+  }
+  .problems-sources {
+    justify-content: center !important;
+  }
+
+  .goals .problems-num {
+    width: 100%;
+  }
+  .goals .problems-num > div {
+    width: 40%;
+  }
+  .goals .problems-num > div:nth-child(2) {
+    flex-direction: column-reverse;
+  }
+  .goals .problems-num > div:nth-child(1) .img-round {
+    left: 3rem;
+  }
+  .goals .problems-num > div:nth-child(2) .img-round {
+    left: -3rem;
+  }
+  .goals .problems-num #quoteLeft {
+    display: none;
+  }
+  .goals .problems-num #quoteRight {
+    display: initial !important;
+  }
+
+  .mission {
+    padding: 0 13% 2rem;
+    gap: 4rem;
+  }
+  .mission h1 {
+    font-size: 3.5rem;
+    text-align: left;
+  }
+  .mission-quote {
+    width: 70%;
+    align-self: flex-end;
+    gap: 1rem;
+  }
+  .mission-quote span:nth-child(odd) {
+    width: 100%;
+    font-size: 2rem;
+  }
+  .mission-quote span:nth-child(2) {
+    width: 70%;
+    font-size: 1.5rem;
+  }
+  .mission .problems-info {
+    width: 60%;
+    align-items: initial;
+  }
+  .mission-section {
+    width: 70%;
+  }
+  .mission-section:nth-child(even) {
+    align-self: flex-end;
+    text-align: right;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .problems, .goals {
+    padding: 0 9% 12rem;
+  }
+  .mission {
+    padding: 0 9% 2rem;
+  }
+  .problems .problems-num {
+    width: 80%;
+  }
+  .goals .problems-num > div {
+    width: 47%;
+    text-align: left;
+  }
+  .goals .problems-num > div:nth-child(1) {
+    top: 2rem;
+  }
+  .goals .problems-num > div:nth-child(2) {
+    flex-direction: column;
+  }
+  .goals .problems-num > div:nth-child(1) .img-round {
+    left: 0;
+  }
+  .goals .problems-num > div:nth-child(2) .img-round {
+    left: 0;
+  }
+  .goals .problems-num #quoteLeft {
+    display: initial;
+  }
+  .goals .problems-num #quoteRight {
+    display: none !important;
+  }
+  .goals .problems-info {
+    gap: 5rem;
+  }
+
+  .mission h1 {
+    text-align: center;
+  }
+  .mission-quote {
+    width: 85%;
+    align-self: center;
+  }
+  .mission .problems-info {
+    width: 100%;
+  }
+}
