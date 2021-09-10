@@ -34,8 +34,8 @@ function updateWindowSize() {
 		}
 	}
 };
-window.onload = updateWindowSize;       // When the page first loads
-window.onresize = updateWindowSize;     // When the browser changes size
+window.addEventListener("load", updateWindowSize);  // When the page first loads
+window.addEventListener("resize", updateWindowSize);  // When the browser changes size
 
 
 menuHamburger.onclick = () => {
@@ -74,7 +74,7 @@ navLi.forEach(el => {
 						e.style = "display: flex !important";
 					}
 				}
-			}
+			} 
 		});
 	}
 });

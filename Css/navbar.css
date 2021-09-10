@@ -1,5 +1,20 @@
-/* color variables */
-/* border radius */
+/* scroll width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* scroll Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+/* scroll Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+/* scroll Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -139,6 +154,11 @@ footer select, footer button {
   background-color: white;
   border-radius: 0.2rem;
   font-family: inherit;
+  font-size: inherit;
+}
+footer option {
+  font-family: inherit;
+  font-size: inherit;
 }
 footer hr {
   display: none;
@@ -171,7 +191,10 @@ footer hr {
 }
 
 main {
-  padding-top: 10rem;
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 8rem 0 5rem;
 }
 
 @media only screen and (max-width: 800px) {
