@@ -1,9 +1,11 @@
 var countImage = 0;
-window.onresize = sizeOpContainer;
+window.onscroll = function(){
+	plusNum()
+}
 slider();
-sizeOpContainer();
+checkOPContainer();
 function slider(){
-	var image = document.getElementsByClassName("slide-img");
+	var image = document.getElementsByClassName("slider-img");
 	var i;
 	for(i=0; i<image.length; i++){
 		image[i].style.display = "none";
@@ -13,46 +15,40 @@ function slider(){
 		countImage=1;
 	}
 	image[countImage-1].style.display = "initial";
-	setTimeout(slider, 2000);
+	setTimeout(slider, 1500);
 }
 
-function sizeOpContainer(){
-	var container = document.getElementById("op");
-	var footer = document.getElementById("footer");
-	var nav = document.getElementById("nav");
-	var html = document.getElementById("html");
-	var divHeight = window.innerHeight - nav.offsetHeight;
-	container.style.top = nav.offsetHeight + "px";
-	container.style.height = divHeight + "px";
-	if(window.innerWidth > 800){
-		let link = document.getElementById("link");
-		let toggle = document.getElementById("toggle");
-		let close = document.getElementById("close");
-		let nav = document.getElementById("nav");
-		link.style.display = "flex";
-		toggle.style.display = "none";
-		close.style.display = "none";
-	}
-	else{
-		hideNav();
-	}
+function checkOPContainer(){
+	var op = document.getElementById("op-cont");
+	op.style.height = window.innerHeight+"px";
 }
 
-function showNav(){
-	var link = document.getElementById("link");
-	var toggle = document.getElementById("toggle");
-	var close = document.getElementById("close");
-	var nav = document.getElementById("nav");
-	link.style.display = "flex";
-	toggle.style.display = "none";
-	close.style.display = "initial";
-}
-function hideNav(){
-	var link = document.getElementById("link");
-	var toggle = document.getElementById("toggle");
-	var close = document.getElementById("close");
-	var nav = document.getElementById("nav");
-	link.style.display = "none";
-	toggle.style.display = "initial";
-	close.style.display = "none";
+var firsttime = true;
+function plusNum(){
+	var scrollTop = document.documentElement.scrollTop;
+	var cont = document.getElementById("op-cont");
+	var counter = document.getElementById("student-container");
+	if(scrollTop > cont.offsetHeight - counter.offsetHeight && firsttime){
+		var numbers = document.querySelectorAll(".num");
+		const COUNT_SPEED = 200;
+		numbers.forEach(number => {
+			const updateCount = () => {
+				const numText = Number(number.innerText);
+				const goal = Number(number.getAttribute("goal"));
+				
+				const plus = goal/COUNT_SPEED;
+
+				if(numText < goal){
+					number.innerText =Math.ceil(numText + plus);
+					setTimeout(updateCount, 1);
+				}
+				else{
+					number.innerText = goal;
+				}
+			}
+			updateCount();
+		});
+		firsttime= false;
+	}
+	
 }

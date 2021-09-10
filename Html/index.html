@@ -5,87 +5,154 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Css/HomeStyle.css">
+    <link rel="stylesheet" href="../Css/navbar.css">
+    // evo-calendar.css, followed by [theme-name].css (optional)
+        <link rel="stylesheet" type="text/css" href="../Css/evo-calendar.css"/>
+        <link rel="stylesheet" type="text/css" href="../Css/evo-calendar.midnight-blue.css"/>
+        <link rel="stylesheet" href="../Css/demo.css">
     <title>Home | genSTEM</title>
 </head>
 <body>
 
-    <nav id="nav">
-        <img id="logo" src="../asset/Photos/Icon/nav.png" alt="">
-        <button onfocus="hideNav()" id="close"><img src="../asset/Photos/Icon/letter-x.png" alt=""></button>
-        <button onfocus="showNav()" id="toggle"><img src="../asset/Photos/Icon/menu.png" alt=""></button>
-        <ul id="link" class="link-container">
-            <li class="active"><a href="#">Home</a></li>
-            <li id="about">About
-                <div class="dropdown">
-                    <a href="wwd.html">What We Do</a>
-                    <a href="#">The Team</a>
-                </div>
-            </li>
-            <li><a href="OurProject.html">Project</a></li>
-            <li><a href="#">Sponsors</a></li>
-            <li><a href="#">Donate</a></li>
-            <li><a href="#">Contract Us</a></li>
-        </ul>
-    </nav>
-    
+    <header>
+        <div class="branding">
+            <a href="#"><img src="../asset/Photos/Icon/nav.png" alt=""></a>
+        </div>
+        <div class="menu-bar">
+            <button class="menu-icon transparent-bg" id="menu-hamburger">
+                <span><i class="fas fa-bars fa-2x"></i></span>
+            </button>
+            <button class="menu-icon transparent-bg" id="menu-close" style="display: none;">
+                <span><i class="fas fa-times fa-2x"></i></span>
+            </button>
+            <nav class="menu-nav">
+                <div class="overlay"></div>
+                <ul class="nav-list">
+                <li class="nav-listitem">About us
+                    <span style="margin-left: auto;"><i class="fas fa-caret-down fa-md"></i></span>
+                    <ul class="nav-listitem-drop">
+                    <li><a href="#">Our mission</a></li>
+                    <li><a href="#">Our team</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    </ul>
+                </li>
+                <li class="nav-listitem"><a href="#">Project</a></li>
+                <li class="nav-listitem"><a href="#">Donate</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <div id="op" class="op-container">
-        <!-- <img id="bg" src="../asset/Photos/OP-img/bg.jpg" alt=""> -->
+    <div id="op-cont" class="container">
         <div class="text">
-            <h1 class="head">GenSTEM</h1>
-            <p class="details">A youth-led organization aiming to increase access to quality STEM education for youth in underserved communities all over Thailand through hands-on workshops , raising awareness and advocacy</p>
-            <button class="next"><a href="#">Learn More</a></button>
+            <div class="header"><h1>GenSTEM</h1></div>
+            <p>A youth-led organization aiming to increase access to quality STEM education for youth in underserved communities all over Thailand through hands-on workshops , raising awareness and advocacy.</p>
         </div>
-        <div class="slide-container">
-            <img class="slide-img" src="../asset/Photos/Innovators for Sustainability/IMG_7478.PNG" alt="">
-            <img class="slide-img" src="../asset/Photos/Mathforfun/IMG_7439.JPG" alt="">
-            <img class="slide-img" src="../asset/Photos/Rocket/IMG_7430.JPG" alt="">
-        </div>
-    </div>
-
-    <div class="layout">
-        <div class="plusNumber">
-            <div class="plusNum-item">
-                <h1>Conducted STEM Programs & workshops</h1>
-                <div class="plusConduct">
-                    8
-                </div>
-            </div>
-            <div class="plusNum-item">
-                <h1>No. of volunteers</h1>
-                <div class="plusVolunteers">
-                    80+
-                </div>
-            </div>
-            <div class="plusNum-item">
-                <h1>Students Impacts</h1>
-                <div class="plusStudent">
-                    1800+
-                </div>
-            </div>
-        </div>
-        <div class="total">
-            <h1>Total reach : 10,807 ppl</h1>
-            <h3>STEM = Science, Technology, Engineering, Maths</h3>
+        <div class="slider">
+            <img class="slider-img" src="../asset/Photos/OP-img/img1.jpg" alt="">
+            <img class="slider-img" src="../asset/Photos/OP-img/img2.jpg" alt="">
+            <img class="slider-img" src="../asset/Photos/OP-img/img3.jpg" alt="">
         </div>
     </div>
 
-    <div id="footer" class="footer">
-        <div class="footer-container">
-            <div class="footer-icon">
+    <div id="student-container" class="student">
+        <div class="stu-container">
+            <div class="block">
+                <div class="head">STEM Program & Workshops Conducted</div>
+                <div goal="8" class="num">0</div>
+            </div>
+            <div class="block">
+                <div class="head">Volunteers</div>
+                <div class="details">
+                    <div goal="200" class="num">0</div>
+                    <div class="hidden">+</div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="head">Total Impact</div>
+                <div class="details">
+                    <div goal="2500" class="num">0</div>
+                    <div class="hidden">+</div>
+                </div>
+            </div>
+        </div>
+        <div class="student-footer">
+            STEM : Science Technology Engineering Mathematics
+        </div>
+    </div>
+
+    <div class="calendar-container">
+        <h1>Calendar</h1>
+        <div id="calendar"></div>
+    </div>
+
+    <div id="founder-container" class="founder">
+        <h1>Founders</h1>
+        <div class="collection">
+            <div class="profiles">
+                <img class="pro-img" src="" alt="">
+                <p class="details">Founder 1</p>
+            </div>
+            <div class="profiles">
+                <img class="pro-img" src="" alt="">
+                <p class="details">Founder 2</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-top">
+            <div class="social-icons">
                 <a target="_blank" href="https://www.facebook.com/Genstemyouth-102506674976308/">
-                    <img src="..//asset/Photos/Icon/facebook.png" alt="">
+                <span style="color: white;"><i class="fab fa-facebook-f fa-2x"></i></span>
                 </a>
                 <a target="_blank" href="https://www.instagram.com/genstem.youth/">
-                    <img id="circle" src="../asset/Photos/Icon/instagram.png" alt="">
+                <span id="circle" style="color: white;"><i class="fab fa-instagram fa-2x"></i></span>
+                </a>
+                <a target="_blank" href="https://www.tiktok.com/@genstem.youth/">
+                <span id="circle" style="color: white;"><i class="fab fa-tiktok fa-2x"></i></span>
                 </a>
             </div>
-            <div class="copy-right">
-                <p>© 2021 made with❤️  by GenSTEM</p>
+            <form class="language-select">
+                <label>Choose language</label>
+                <div class="language-select-option">
+                <select>
+                    <option selected value="en">English</option>
+                    <option value="th">Thai</option>
+                </select>
+                <button>Apply</button>
+                </div>
+            </form>
             </div>
+            <hr>
+            <div class="copyright">
+            <p>© 2021 GenSTEM. All rights reserved.</p>
         </div>
-    </div>
+    </footer>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="../Js/evo-calendar.js"></script>
+        <script src="../Js/demo.js"></script>
+        <script>
+        // initialize your calendar, once the page's DOM is ready
+        $('#calendar').evoCalendar({
+            'theme': 'Midnight Blue',
+         'calendarEvents': [
+              {
+                   id: 'event1', // Event's id (required, for removing event);
+                    name: 'new Year',
+                   description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt corrupti labore animi rerum eveniet at sit, numquam incidunt? Consequuntur sapiente repellat officia, culpa fugiat dicta iure molestias fuga ad dolores? Ex ullam quia fuga ea quis laborum suscipit dicta eos corrupti minima? Dolorem dolorum dicta, officiis eveniet libero nobis debitis temporibus dolor at, repellat nemo quo ad? Culpa a inventore rerum nobis deserunt possimus magni quaerat, voluptates blanditiis neque debitis minus. Iure mollitia ducimus omnis quod error et eligendi culpa assumenda aperiam ex? Aspernatur molestias quo dignissimos odit quisquam perspiciatis veritatis ipsa hic cupiditate sunt, modi eius, excepturi impedit earum.', // Description of event (optional)
+                   date: 'January/1/2021', // Date of event
+                   badge: '1-day event',
+                   type: 'holiday', // Type of event (event|holiday|birthday)
+                   color: '#63d867', // Event custom color (optional)
+                   everyYear: true // Event is every year (optional)
+              }
+            ]
+        });
+    </script>
+    <script src="../Js/navbar.js"></script>
+    <script src="https://kit.fontawesome.com/0ac04e08b1.js" crossorigin="anonymous"></script>
     <script src="../Js/HomeApp.js"></script>
-</body>
+    
 </html>
