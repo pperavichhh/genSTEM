@@ -25,10 +25,12 @@ function updateWindowSize() {
 							 document.body.clientHeight;
 
 	if (width > 1370) {
-    lineClamp = 10;
+    lineClamp = "11.875rem";
+    //lineClamp = 10;
   }
   else if (width > 920) {
-    lineClamp = 7;
+    lineClamp = "8.3125rem";
+    //lineClamp = 7;
     founders.classList.remove("flex-col");
     founders.classList.add("flex-row");
 		founder.forEach(el => {
@@ -47,7 +49,8 @@ function updateWindowSize() {
     });
 	}
 	else if (width > 530) {
-    lineClamp = 4;
+    lineClamp = "4.75rem";
+    //lineClamp = 4;
     founders.classList.remove("flex-row");
     founders.classList.add("flex-col");
 		founder.forEach(el => {
@@ -66,7 +69,8 @@ function updateWindowSize() {
     });
 	}
   else {
-    lineClamp = 4;
+    lineClamp = "4.75rem";
+    //lineClamp = 4;
     founders.classList.add("flex-col");
     founders.classList.remove("flex-row");
 		founder.forEach(el => {
@@ -87,8 +91,10 @@ function updateWindowSize() {
   
 
   founderSpeech.forEach(el => {
-    if (el.style.webkitLineClamp != "initial")
-      el.style.webkitLineClamp = lineClamp;
+    if (el.style.height != "initial")
+      el.style.height = lineClamp;
+    /*if (el.style.webkitLineClamp != "initial")
+      el.style.webkitLineClamp = lineClamp;*/
   });
 
   volunteersTable.forEach(element => {
@@ -103,14 +109,24 @@ window.addEventListener("resize", updateWindowSize);
 
 readMore.forEach(el => {
   el.onclick = function() {
-    if (this.previousElementSibling.style.webkitLineClamp == "initial") {
+    if (this.previousElementSibling.style.height == "initial") {
+      this.previousElementSibling.style.height = lineClamp;
+      this.previousElementSibling.style.display = "block";
+      this.innerHTML = "Read more&nbsp;<i class='fas fa-caret-down'></i>";
+    }
+    else {
+      this.previousElementSibling.style.height = "initial";
+      this.previousElementSibling.style.display = "flex";
+      this.innerHTML = "Read less&nbsp;<i class='fas fa-caret-down fa-rotate-180'></i>";
+    }
+    /*if (this.previousElementSibling.style.webkitLineClamp == "initial") {
       this.previousElementSibling.style.webkitLineClamp = lineClamp;
       this.innerHTML = "Read more&nbsp;<i class='fas fa-caret-down'></i>";
     }
     else {
       this.previousElementSibling.style.webkitLineClamp = "initial";
       this.innerHTML = "Read less&nbsp;<i class='fas fa-caret-down fa-rotate-180'></i>";
-    }
+    }*/
   }
 });
 
