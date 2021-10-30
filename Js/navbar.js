@@ -17,7 +17,7 @@ function updateWindowSize() {
 							 document.documentElement.clientHeight ||
 							 document.body.clientHeight;
 
-	if (width > 800) {
+	if (width > 768) {
 		menuHamburger.style = "display: none";
 		menuClose.style = "display: none";
 		menuNav.style = "display: initial";

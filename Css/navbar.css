@@ -194,10 +194,10 @@ main {
   display: inline-flex;
   flex-direction: column;
   width: 100%;
-  padding: 8rem 0 5rem;
+  padding-top: 4.5rem;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 768px) {
   header {
     display: block;
   }
@@ -267,7 +267,7 @@ main {
   }
 }
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 600px) {
   footer hr {
     display: initial;
     width: 100%;

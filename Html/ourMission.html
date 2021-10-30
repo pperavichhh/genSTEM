@@ -7,13 +7,15 @@
   <title>Our mission | genSTEM</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700">
   <link rel="stylesheet" href="../Css/navbar.css">
+  <link rel="stylesheet" href="../Css/main.css">
   <link rel="stylesheet" href="../Css/ourMission.css">
+  <script src="../Js/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
   <header>
     <div class="branding">
-      <a href="../Html/index.html"><img src="../asset/Photos/Icon/nav.png" alt=""></a>
+      <a href="../Html/navbar.html"><img src="../asset/Photos/Icon/nav.png" alt=""></a>
     </div>
     <div class="menu-bar">
       <button class="menu-icon transparent-bg" id="menu-hamburger">
@@ -33,7 +35,7 @@
               <li><a href="#">Contact us</a></li>
             </ul>
           </li>
-          <li class="nav-listitem"><a href="../Html/OurProject.html">Project</a></li>
+          <li class="nav-listitem"><a href="#">Project</a></li>
           <li class="nav-listitem"><a href="#">Donate</a></li>
         </ul>
       </nav>
@@ -41,104 +43,145 @@
   </header>
 
   <!-- put a page in <main> -->
-  <main> 
-    <div class="problems flex-col">
-      <h1>The Problems</h1>
-      <div class="problems-info flex-row">
-        <div class="problems-statement flex-col">
-          <p>We believe that there is a lack in quality education in Thailand.  There are an adequate amount of resources , but the problem lies within the distribution and execution of those resources.  The government has made huge investments into education, yet no promising results are shown ( mostly in rural areas or underserved communities ).</p>
-          <p>At the end of lower secondary education, only 46% have a minimum proficiency in mathematics.  As there is a clear scaarcity in STEM education, we would like to make science, technology, engineering & mathematics our main focus for our workshops.</p>
-        </div>
+  <main>
+    <section class="main-head flex-col">
+      <div class="overlay"></div>
+      <video autoplay muted loop>
+        <source src="../asset/Photos/Background/istockphoto-661821536-640_adpp_is.mp4" type="video/mp4">
+      </video>
+      <div class="main-head flex-col">
+        <h1>Our Mission</h1>
+      </div>
+    </section>
 
-        <div class="problems-num flex-col">
-          <div class="flex-col">
-            <p>>4.3M</p>
-            <p>underprivileged youth lacking educational opportunities</p>
+    <section class="problems flex-col">
+      <div class="wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+          <path fill="#F7E6DC" fill-opacity="1" d="M0,64L34.3,96C68.6,128,137,192,206,229.3C274.3,267,343,277,411,266.7C480,256,549,224,617,197.3C685.7,171,754,149,823,122.7C891.4,96,960,64,1029,48C1097.1,32,1166,32,1234,53.3C1302.9,75,1371,117,1406,138.7L1440,160L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
+        </svg>
+      </div>
+      <div class="problems flex-col">
+        <h1>The Problems</h1>
+        <div class="problems-info flex-col">
+          <div class="problems-statement flex-col">
+            <p>We believe that there is a lack in quality education in Thailand.  There are an adequate amount of resources , but the problem lies within the distribution and execution of those resources.  The government has made huge investments into education, yet no promising results are shown ( mostly in rural areas or underserved communities ).</p>
+            <img src="../asset/Photos/Background/elementary-school-students.jpg">
+            <p>At the end of lower secondary education, only 46% have a minimum proficiency in mathematics.  As there is a clear scaarcity in STEM education, we would like to make science, technology, engineering & mathematics our main focus for our workshops.</p>
           </div>
-          <div class="flex-col">
-            <p>46%</p>
+
+          <div class="problems-num flex-row">
+            <div class="flex-col">
+              <p>>4.3M</p>
+              <p>underprivileged youth lacking educational opportunities</p>
+            </div>
+            <div class="flex-col">
+              <p>46%</p>
+              <p>at the end of lower secondary education, only 46% have a minimum proficiency in mathematics</p>
+            </div>
+            <div class="flex-col">
+              <p>12,000</p>
+              <p>small schools facing shortage of teachers</p>
+            </div>
+          </div>
+        </div>
+        <div class="problems-sources flex-row wrap">
+          <span style="padding-right: 1rem;"><strong>sources:</strong></span>
+          <span><a href="#">www</a></span>/
+          <span><a href="#">www</a></span>/
+          <span><a href="#">www</a></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="goals flex-col">
+      <div class="wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+          <path fill="#ebc8c2" fill-opacity="1" d="M0,64L34.3,96C68.6,128,137,192,206,229.3C274.3,267,343,277,411,266.7C480,256,549,224,617,197.3C685.7,171,754,149,823,122.7C891.4,96,960,64,1029,48C1097.1,32,1166,32,1234,53.3C1302.9,75,1371,117,1406,138.7L1440,160L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
+        </svg>
+      </div>
+      <div class="goals flex-col">
+        <h1>The Goals</h1>
+        <div class="problems-info flex-row">
+          <div class="problems-num flex-row">
+            <div class="flex-col">
+              <img class="img-round" src="../asset/Photos/Icon/4Education.jpg" alt="">
+              <span style="text-align: left;"><i class="fas fa-quote-left"></i></span>
+              <span>Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all</span>
+              <!--<span style="text-align: right;"><i class="fas fa-quote-right"></i></span>-->
+            </div>
+            <div class="flex-col">
+              <img class="img-round" src="../asset/Photos/Icon/equality.jpg" alt="">
+              <span style="text-align: left;" id="quoteLeft"><i class="fas fa-quote-left"></i></span>
+              
+              <span>Reduce inequality within and among countries</span>
+              <span style="display: none; text-align: right;" id="quoteRight"><i class="fas fa-quote-right"></i></span>
+            </div>
+          </div>
+          
+          <div class="goals-statement flex-col">
+            <p>We believe that there is a lack in quality education in Thailand.  There are an adequate amount of resources , but the problem lies within the distribution and execution of those resources.  The government has made huge investments into education, yet no promising results are shown ( mostly in rural areas or underserved communities ).</p>
             <p>at the end of lower secondary education, only 46% have a minimum proficiency in mathematics</p>
           </div>
-          <div class="flex-col">
-            <p>12,000</p>
-            <p>small schools facing shortage of teachers</p>
-          </div>
+        </div>
+        <div class="problems-sources flex-row wrap">
+          <span style="padding-right: 1rem;"><strong>sources:</strong></span>
+          <span><a href="#">www</a></span>/
+          <span><a href="#">www</a></span>/
+          <span><a href="#">www</a></span>
         </div>
       </div>
-      <div class="problems-sources flex-row wrap">
-        <span style="padding-right: 1rem;"><strong>sources:</strong></span>
-        <span><a href="#">www</a></span>/
-        <span><a href="#">www</a></span>/
-        <span><a href="#">www</a></span>
+      <div class="wave" id="bottom-wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+          <path fill="#ebc8c2" fill-opacity="1" d="M0,64L34.3,96C68.6,128,137,192,206,229.3C274.3,267,343,277,411,266.7C480,256,549,224,617,197.3C685.7,171,754,149,823,122.7C891.4,96,960,64,1029,48C1097.1,32,1166,32,1234,53.3C1302.9,75,1371,117,1406,138.7L1440,160L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"></path>
+        </svg>
       </div>
-    </div>
+      <img src="../asset/Photos/Background/asian-student-learning-on-site.jpg">
+    </section>
 
-    <div class="goals flex-col">
-      <h1>The Goals</h1>
-      <div class="problems-info flex-row">
-        <div class="problems-num flex-row">
-          <div class="flex-col">
-            <img class="img-round" src="../asset/Photos/Icon/4Education.jpg" alt="">
-            <span style="text-align: left;"><i class="fas fa-quote-left"></i></span>
-            <span>Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all</span>
-            <!--<span style="text-align: right;"><i class="fas fa-quote-right"></i></span>-->
-          </div>
-          <div class="flex-col">
-            <img class="img-round" src="../asset/Photos/Icon/equality.jpg" alt="">
-            <span style="text-align: left;" id="quoteLeft"><i class="fas fa-quote-left"></i></span>
-            
-            <span>Reduce inequality within and among countries</span>
-            <span style="display: none; text-align: right;" id="quoteRight"><i class="fas fa-quote-right"></i></span>
-          </div>
-        </div>
-        
-        <div class="goals-statement flex-col">
-          <p>We believe that there is a lack in quality education in Thailand.  There are an adequate amount of resources , but the problem lies within the distribution and execution of those resources.  The government has made huge investments into education, yet no promising results are shown ( mostly in rural areas or underserved communities ).</p>
-          <p>at the end of lower secondary education, only 46% have a minimum proficiency in mathematics</p>
-        </div>
+    <section class="mission-quote flex-col">
+      <div class="wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+          <path fill="#ccaa88" fill-opacity="1" d="M0,64L34.3,96C68.6,128,137,192,206,229.3C274.3,267,343,277,411,266.7C480,256,549,224,617,197.3C685.7,171,754,149,823,122.7C891.4,96,960,64,1029,48C1097.1,32,1166,32,1234,53.3C1302.9,75,1371,117,1406,138.7L1440,160L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
+        </svg>
       </div>
-      <div class="problems-sources flex-row wrap" style="justify-content: flex-end;">
-        <span style="padding-right: 1rem;"><strong>sources:</strong></span>
-        <span><a href="#">www</a></span>/
-        <span><a href="#">www</a></span>/
-        <span><a href="#">www</a></span>
-      </div>
-    </div>
-
-    <div class="mission flex-col">
-      <h1>Our Mission</h1>
       <div class="mission-quote flex-col">
         <span><i class="fas fa-quote-left"></i></span>
-        <span>Bridging the opportunity gap in STEM education</span>
+        <span>Our mission is to bridge the opportunity gap in<br><strong>STEM Education</strong></span>
         <span style="text-align: right;"><i class="fas fa-quote-right"></i></span>
       </div>
-      <div class="problems-info flex-row">
-        <div class="mission-section flex-col">
-          <div class="flex-col">
+    </section>
+
+    <section class="mission flex-col">
+      <div class="wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+          <path fill="#ff8844" fill-opacity="1" d="M0,64L34.3,96C68.6,128,137,192,206,229.3C274.3,267,343,277,411,266.7C480,256,549,224,617,197.3C685.7,171,754,149,823,122.7C891.4,96,960,64,1029,48C1097.1,32,1166,32,1234,53.3C1302.9,75,1371,117,1406,138.7L1440,160L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
+        </svg>
+      </div>
+      <div class="mission flex-col">
+        <div class="problems-info flex-row">
+          <div class="mission-section flex-col">
+            <img src="../asset/Photos/Icon/round-table.png" alt="">
             <h3>Hands-on workshops</h3>
             <span>STEM teaching sessions focused on fulfilling students educational needs</span>
           </div>
-        </div>
-        <div class="mission-section flex-col">
-          <div class="flex-col">
+          <div class="mission-section flex-col">
+            <img src="../asset/Photos/Icon/aware2.png" alt="">
             <h3>Raise awareness</h3>
             <span>via social media posts revolving around STEM and education in Thailand</span>
           </div>
-        </div>
-        <div class="mission-section flex-col">
-          <div class="flex-col">
+          <div class="mission-section flex-col">
+            <img src="../asset/Photos/Icon/united.png" alt="">
             <h3>Participation : Empowering</h3>
             <span>passionate youth to become volunteers and drive change in their community</span>
           </div>
-        </div>
-        <div class="mission-section flex-col">
-          <div class="flex-col">
+          <div class="mission-section flex-col">
+            <img src="../asset/Photos/Icon/resources2.png" alt="">
             <h3>Resources Support</h3>
             <span>providing educational supplies to enhance learning</span>
           </div>
         </div>
       </div>
-    </div>
+    </section>
     
   </main>
 
