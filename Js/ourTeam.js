@@ -1,19 +1,15 @@
 ﻿var width = 0;
 var height = 0;
 var lineClamp = 0;
+
 var founders = document.querySelector(".founders-list");
 var founder = document.querySelectorAll(".founders-list li");
 var readMore = document.querySelectorAll(".founder-info > span");
 var founderSpeech = document.querySelectorAll(".founder-speech");
 
-var volunteers = document.querySelectorAll(".volunteers > div:nth-child(2)");
-var volunteersTemp = document.querySelectorAll(".volunteers2 > div");
-var position = document.querySelectorAll(".position");
-var positionLi = document.querySelectorAll(".position span");
-var membersList = document.querySelectorAll(".members-list");
-
 var volunteersTable = document.querySelectorAll(".volunteers-table");
-var volunteers2 = document.querySelectorAll(".volunteers2");
+var volunteers = document.querySelectorAll(".volunteers");
+
 
 function updateWindowSize() {
 	// Get the dimensions of the viewport
@@ -24,11 +20,7 @@ function updateWindowSize() {
 							 document.documentElement.clientHeight ||
 							 document.body.clientHeight;
 
-	if (width > 1370) {
-    lineClamp = "11.875rem";
-    //lineClamp = 10;
-  }
-  else if (width > 920) {
+	if (width > 1024) {
     lineClamp = "8.3125rem";
     //lineClamp = 7;
     founders.classList.remove("flex-col");
@@ -37,18 +29,8 @@ function updateWindowSize() {
       el.classList.remove("flex-row")
       el.classList.add("flex-col");
     });
-
-    volunteers.forEach(el => {
-      el.classList.remove("flex-col");
-      el.classList.add("flex-row");
-    });
-    position.forEach(el => {
-      el.classList.remove("flex-row");
-      el.classList.remove("wrap");
-      el.classList.add("flex-col");
-    });
 	}
-	else if (width > 530) {
+	else if (width > 476) {
     lineClamp = "4.75rem";
     //lineClamp = 4;
     founders.classList.remove("flex-row");
@@ -56,16 +38,6 @@ function updateWindowSize() {
 		founder.forEach(el => {
       el.classList.remove("flex-col")
       el.classList.add("flex-row");
-    });
-
-    volunteers.forEach(el => {
-      el.classList.remove("flex-row");
-      el.classList.add("flex-col");
-    });
-    position.forEach(el => {
-      el.classList.remove("flex-col");
-      el.classList.add("flex-row");
-      el.classList.add("wrap");
     });
 	}
   else {
@@ -77,18 +49,7 @@ function updateWindowSize() {
       el.classList.remove("flex-row")
       el.classList.add("flex-col");
     });
-
-    volunteers.forEach(el => {
-      el.classList.remove("flex-row");
-      el.classList.add("flex-col");
-    });
-    position.forEach(el => {
-      el.classList.remove("flex-col");
-      el.classList.add("flex-row");
-      el.classList.add("wrap");
-    });
   }
-  
 
   founderSpeech.forEach(el => {
     if (el.style.height != "initial")
@@ -96,56 +57,7 @@ function updateWindowSize() {
     /*if (el.style.webkitLineClamp != "initial")
       el.style.webkitLineClamp = lineClamp;*/
   });
-
-  volunteersTable.forEach(element => {
-    sortTable(element, 0)
-  });
 }
-
-window.addEventListener("load", updateWindowSize);
-window.addEventListener("resize", updateWindowSize);
-
-
-
-readMore.forEach(el => {
-  el.onclick = function() {
-    if (this.previousElementSibling.style.height == "initial") {
-      this.previousElementSibling.style.height = lineClamp;
-      this.previousElementSibling.style.display = "block";
-      this.innerHTML = "Read more&nbsp;<i class='fas fa-caret-down'></i>";
-    }
-    else {
-      this.previousElementSibling.style.height = "initial";
-      this.previousElementSibling.style.display = "flex";
-      this.innerHTML = "Read less&nbsp;<i class='fas fa-caret-down fa-rotate-180'></i>";
-    }
-    /*if (this.previousElementSibling.style.webkitLineClamp == "initial") {
-      this.previousElementSibling.style.webkitLineClamp = lineClamp;
-      this.innerHTML = "Read more&nbsp;<i class='fas fa-caret-down'></i>";
-    }
-    else {
-      this.previousElementSibling.style.webkitLineClamp = "initial";
-      this.innerHTML = "Read less&nbsp;<i class='fas fa-caret-down fa-rotate-180'></i>";
-    }*/
-  }
-});
-
-position.forEach(element => {
-  Array.prototype.slice.call(element.children).forEach(el => {
-    el.onclick = function() {
-      if (!this.classList.contains("active")) {
-        Array.prototype.slice.call(element.children).forEach(e => {
-          e.classList.remove("active");
-        });
-        Array.prototype.slice.call(element.nextElementSibling.children).forEach(e => {
-          e.classList.remove("active");
-        });
-        this.classList.add("active");
-        Array.prototype.slice.call(element.nextElementSibling.children)[Array.from(this.parentElement.children).indexOf(this)].classList.add("active");
-      }
-    }
-  });
-});
 
 function sortTable(element, idx) {
   var rows, rowA, rowB;
@@ -185,75 +97,107 @@ function sortTable(element, idx) {
   }
 }
 
-volunteersTable.forEach(element => {
-  element.querySelectorAll("th").forEach((el, idx) => {
+function loadWindow() {
+  document.querySelector("video").playbackRate = 0.6;
+
+  readMore.forEach(el => {
     el.onclick = function() {
-      element.querySelectorAll("i:nth-child(1)").forEach(e => { 
-        if (e == this.querySelector("i:nth-child(1)")) {
-          e.style.opacity = 1;
-          if (e.classList.contains("fa-rotate-180"))
-            e.classList.remove("fa-rotate-180");
-          else
-            e.classList.add("fa-rotate-180");
-        }
-        else {
-          e.style.opacity = 0;
-          e.classList.remove("fa-rotate-180");
-        }
-      });
-      sortTable(element, idx)
+      if (this.previousElementSibling.style.height == "initial") {
+        this.previousElementSibling.style.height = lineClamp;
+        this.previousElementSibling.style.display = "block";
+        this.innerHTML = "Read more&nbsp;<i class='fas fa-caret-down'></i>";
+      }
+      else {
+        this.previousElementSibling.style.height = "initial";
+        this.previousElementSibling.style.display = "flex";
+        this.innerHTML = "Read less&nbsp;<i class='fas fa-caret-down fa-rotate-180'></i>";
+      }
+      /*if (this.previousElementSibling.style.webkitLineClamp == "initial") {
+        this.previousElementSibling.style.webkitLineClamp = lineClamp;
+        this.innerHTML = "Read more&nbsp;<i class='fas fa-caret-down'></i>";
+      }
+      else {
+        this.previousElementSibling.style.webkitLineClamp = "initial";
+        this.innerHTML = "Read less&nbsp;<i class='fas fa-caret-down fa-rotate-180'></i>";
+      }*/
     }
   });
-});
 
-volunteers2.forEach(element => {
-  var input, selectedIdx = element.querySelector(".table-filter select").selectedIndex;
-  var rows = element.querySelector("table").getElementsByTagName("tr");
-  var td, txtValue;
-
-  function filterTable() {
-    if (selectedIdx != 0) {
-      // Loop through all table rows, and hide those who don't match the search query
-      for (var i=0; i < rows.length; i++) {
-        td = rows[i].getElementsByTagName("td")[selectedIdx-1];
-        if (td) {
-          txtValue = td.textContent || td.innerText;
-          if (txtValue.toUpperCase().indexOf(input) > -1) {
-            rows[i].style.display = "";
-          } 
-          else {
-            rows[i].style.display = "none";
+  volunteersTable.forEach(element => {
+    sortTable(element, 0);
+    element.querySelectorAll("th").forEach((el, idx) => {
+      el.onclick = function() {
+        element.querySelectorAll("i:nth-child(1)").forEach(e => { 
+          if (e == this.querySelector("i:nth-child(1)")) {
+            e.style.opacity = 1;
+            if (e.classList.contains("fa-rotate-180"))
+              e.classList.remove("fa-rotate-180");
+            else
+              e.classList.add("fa-rotate-180");
           }
-        }
+          else {
+            e.style.opacity = 0;
+            e.classList.remove("fa-rotate-180");
+          }
+        });
+        sortTable(element, idx)
       }
-    }
-    else {
-      var displayRow = false;
-      for (var i=0; i < rows.length; i++) {
-        displayRow = false;
-        for (var j=0; j < rows[i].getElementsByTagName("td").length; j++) {
-          td = rows[i].getElementsByTagName("td")[j];
+    });
+  });
+
+  volunteers.forEach(element => {
+    var input, selectedIdx = element.querySelector(".table-filter select").selectedIndex;
+    var rows = element.querySelector("table").getElementsByTagName("tr");
+    var td, txtValue;
+
+    function filterTable() {
+      if (selectedIdx != 0) {
+        // Loop through all table rows, and hide those who don't match the search query
+        for (var i=0; i < rows.length; i++) {
+          td = rows[i].getElementsByTagName("td")[selectedIdx-1];
           if (td) {
             txtValue = td.textContent || td.innerText;
             if (txtValue.toUpperCase().indexOf(input) > -1) {
               rows[i].style.display = "";
-              displayRow = true;
             } 
-            else if (!displayRow) {
+            else {
               rows[i].style.display = "none";
             }
           }
         }
       }
+      else {
+        var displayRow = false;
+        for (var i=0; i < rows.length; i++) {
+          displayRow = false;
+          for (var j=0; j < rows[i].getElementsByTagName("td").length; j++) {
+            td = rows[i].getElementsByTagName("td")[j];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(input) > -1) {
+                rows[i].style.display = "";
+                displayRow = true;
+              } 
+              else if (!displayRow) {
+                rows[i].style.display = "none";
+              }
+            }
+          }
+        }
+      }
     }
-  }
 
-  element.querySelector(".table-filter select").onchange = function() {
-    selectedIdx = element.querySelector(".table-filter select").selectedIndex;
-    if (input != null) filterTable();
-  }
-  element.querySelector(".table-filter input").onkeyup = function() {
-    input = element.querySelector(".table-filter input").value.toUpperCase();
-    filterTable();
-  }
-});
+    element.querySelector(".table-filter select").onchange = function() {
+      selectedIdx = element.querySelector(".table-filter select").selectedIndex;
+      if (input != null) filterTable();
+    }
+    element.querySelector(".table-filter input").onkeyup = function() {
+      input = element.querySelector(".table-filter input").value.toUpperCase();
+      filterTable();
+    }
+  });
+}
+
+window.addEventListener("load", loadWindow);
+window.addEventListener("load", updateWindowSize);
+window.addEventListener("resize", updateWindowSize);

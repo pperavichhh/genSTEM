@@ -101,10 +101,10 @@ div.main-head {
 
 @media only screen and (max-width: 600px) {
   :root {
-    font-size: 12px;
+    font-size: 14px;
   }
   main {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   section.main-head {
