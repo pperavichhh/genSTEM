@@ -1,0 +1,430 @@
+﻿section.main-head {
+  height: 40rem;
+}
+.main-head .bullet-container {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.bullet-container .bullet {
+  margin-right: 14px;
+  height: 0.85rem;
+  width: 0.85rem;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.5;
+}
+.bullet-container .bullet:last-child {
+  margin-right: 0px;
+}
+.bullet-container .bullet.active {
+  opacity: 1;
+}
+
+.main-head .slider-content {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.slider-content .slider-single {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-self: center;
+}
+.slider-single img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  z-index: -1;
+}
+.slider-single > h1 {
+  color: white;
+}
+.slider-single.active {
+  display: flex;
+}
+
+
+
+
+section.problems {
+  background-color: #F7E6DC;
+  color: #564941;
+}
+div.problems {
+  width: 70rem;
+  padding: 9rem 0 16rem;
+  align-self: center;
+  gap: 4rem;
+}
+.problems-info {
+  justify-content: space-between;
+}
+.problems .problems-info {
+  align-items: center;
+  gap: 6rem;
+}
+.problems .problems-info img {
+  position: relative;
+  width: 100%;
+  align-self: center;
+}
+.problems-statement {
+  width: 45rem;
+  gap: 3rem;
+  text-align: center;
+}
+.problems-num {
+  justify-content: space-between;
+}
+.problems .problems-num {
+  width: inherit;
+}
+.problems-num > div {
+  gap: 1rem;
+}
+.problems .problems-num > div {
+  width: 16rem;
+  text-align: center;
+}
+.problems-num > div > p:first-child {
+  font-size: 2em;
+  font-weight: bold;
+}
+.problems-sources {
+  gap: 0 0.5rem;
+}
+.problems .problems-sources {
+  justify-content: center;
+}
+.problems-sources a:link, .problems-sources a:visited{
+  display: contents;
+  color: inherit;
+}
+
+section.goals {
+  background-color: #ebc8c2;
+  color: #564941;
+}
+
+section.mission-quote {
+  background-color: #ccaa88;
+  color: #ffffff
+}
+div.mission-quote {
+  width: 45rem;
+  padding: 7rem 0 14rem;
+  align-self: center;
+  align-items: center;
+  gap: 3rem;
+}
+.mission-quote span:nth-child(odd) {
+  width: 100%;
+  font-size: 2.7em;
+}
+.mission-quote span:nth-child(2) {
+  width: 35rem;
+  text-align: center;
+  font-size: 2em;
+}
+.mission-quote span:nth-child(2) strong {
+  font-size: 1.35em;
+}
+
+section.mission {
+  background-color: #ff8844;
+  color: #ffffff
+}
+div.mission {
+  width: 76rem;
+  padding: 9rem 0 16rem;
+  align-self: center;
+}
+.mission-section {
+  width: 16rem;
+  gap: 1rem;
+  transition: transform 0.5s ease;
+}
+.mission-section img {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}
+/*.mission-section:hover {
+  //top: -1rem;
+  //width: 20rem;
+  //font-size: 1.25em;
+  transform: scale(1.2);
+}
+.mission-section:hover::after {
+  display: inline-block;
+  width: 40.3rem; //20
+  height: 22.7rem; //15
+  position: relative;
+  top: 3rem;
+  content: "";
+  background-size: cover;
+  background-position: center;
+
+  //content: url('../asset/Photos/Virtual Sci ws @ANS/IMG_7466.jpg');
+  //display: block;
+  //opacity: 0.5;
+  //transform: scale(.5);
+}
+.mission-section:nth-child(1):hover::after {
+  background-image: url('../asset/Photos/Virtual Sci ws @ANS/IMG_7466.jpg');
+  align-self: flex-start;
+}
+.mission-section:nth-child(2):hover::after {
+  background-image: url('../asset/Photos/STEMBOX SS1/IMG_7464.jpg');
+  align-self: center;
+}
+.mission-section:nth-child(3):hover::after {
+  background-image: url('../asset/Photos/Mathforfun/IMG_7449.jpg');
+  align-self: center;
+}
+.mission-section:nth-child(4):hover::after {
+  background-image: url('../asset/Photos/STEMBOX SS1/IMG_7464.jpg');
+  align-self: flex-end;
+}*/
+
+section.sponsors {
+  background-color: #ffffff;
+  color: #000000
+}
+div.sponsors {
+  width: 45rem;
+  padding: 9rem 0 16rem;
+  gap: 6rem;
+  align-self: center;
+}
+.sponsors-logo {
+  gap: 5rem;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+.sponsors-logo li:nth-child(1), .sponsors-logo li:nth-child(2) {
+  height: 5rem
+}
+.sponsors-logo li:nth-child(3) {
+  height: 2.5rem
+}
+.sponsors-logo img {
+  height: 100%;
+}
+
+@media only screen and (max-width: 1430px) {
+  div.mission {
+    width: 100%;
+    padding: 9rem 7% 16rem;
+  }
+}
+
+@media only screen and (max-width: 1310px) {
+  div.problems {
+    width: 100%;
+    padding: 9rem 7% 16rem;
+  }
+  div.goals {
+    width: 100%;
+    padding: 9rem 7% 10.5rem;
+  }
+
+  .goals-statement {
+    width: 50%;
+  }
+  .goals .problems-num {
+    width: 36.5%;
+    gap: 0;
+  }
+  .goals .problems-num > div {
+    width: 47.2%;
+  }
+  
+  div.mission {
+    width: 45rem;
+    padding: 9rem 0 16rem;
+  }
+  .mission .problems-info {
+    row-gap: 5rem;
+  }
+  .mission-section {
+    width: 19rem;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .problems-statement, .goals-statement {
+    width: 100%;
+    text-align: center;
+  }
+  .problems .problems-num {
+    width: 19rem;
+    align-items: center;
+    gap: 3rem;
+  }
+  .problems .problems-num > div {
+    width: 100%;
+  }
+  .problems-sources {
+    justify-content: center !important;
+  }
+  
+  .goals h1 {
+    text-align: center;
+  }
+  .goals .problems-info {
+    align-items: center;
+    gap: 3rem;
+  }
+  .goals .problems-num {
+    width: 100%;
+  }
+  .goals .problems-num > div {
+    width: 40%;
+    text-align: center;
+  }
+  .goals .problems-num > div:last-child {
+    flex-direction: column-reverse;
+  }
+  .goals .problems-num > div:first-child .img-round {
+    left: 3rem;
+  }
+  .goals .problems-num > div:last-child .img-round {
+    left: -3rem;
+  }
+  .goals .problems-num #quoteLeft {
+    display: none;
+  }
+  .goals .problems-num #quoteRight {
+    display: initial !important;
+  }
+  
+  div.mission-quote {
+    width: 100%;
+    padding: 7rem 7% 14rem;
+  }
+  .mission-quote span:nth-child(2) {
+    width: calc(38/45*100%);
+  }
+  div.mission {
+    width: 100%;
+    padding: 9rem 7% 16rem;
+  }
+
+  div.sponsors {
+    width: 100%;
+    padding: 9rem 7% 16rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  div.problems, div.mission {
+    width: 100%;
+    padding: 6rem 9% 13rem;
+  }
+  div.goals {
+    width: 100%;
+    padding: 6rem 9% 8.5rem;
+  }
+
+  section.goals > img {
+    height: 40rem;
+    object-fit: cover;
+    object-position: right bottom;
+  }
+  .goals #bottom-wave {
+    bottom: 40rem;
+  }
+
+  div.mission-quote {
+    width: 100%;
+    padding: 4rem 9% 11rem;
+  }
+
+  .mission .problems-info {
+    row-gap: 0;
+  }
+  .mission-section {
+    width: 25rem;
+  }
+  .mission-section:nth-child(even) {
+    align-self: flex-end;
+    align-items: flex-end;
+    text-align: right;
+  }
+  
+  div.sponsors {
+    padding: 6rem 9% 13rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  div.problems, div.mission {
+    width: 100%;
+    padding: 4rem 9% 11rem;
+  }
+  div.goals {
+    width: 100%;
+    padding: 4rem 9% 6.5rem;
+  }
+
+  section.goals > img {
+    height: 35rem;
+    object-fit: cover;
+    object-position: right bottom;
+  }
+  .goals #bottom-wave {
+    bottom: 35rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .problems .problems-num {
+    width: 80%;
+  }
+  .goals .problems-num > div {
+    width: 47%;
+    text-align: left;
+  }
+  .goals .problems-num > div:nth-child(1) {
+    top: 2rem;
+  }
+  .goals .problems-num > div:nth-child(2) {
+    flex-direction: column;
+  }
+  .goals .problems-num > div:nth-child(1) .img-round {
+    left: 0;
+  }
+  .goals .problems-num > div:nth-child(2) .img-round {
+    left: 0;
+  }
+  .goals .problems-num #quoteLeft {
+    display: initial;
+  }
+  .goals .problems-num #quoteRight {
+    display: none !important;
+  }
+  .goals .problems-info {
+    gap: 5rem;
+  }
+
+  .mission h1 {
+    text-align: center;
+  }
+  .mission-section {
+    width: 70%;
+  }
+}

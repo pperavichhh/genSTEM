@@ -1,184 +1,235 @@
 <!DOCTYPE html>
 <html id="html" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Css/HomeStyle.css">
-    <link rel="stylesheet" href="../Css/navbar.css">
-    // evo-calendar.css, followed by [theme-name].css (optional)
-        <link rel="stylesheet" type="text/css" href="../Css/evo-calendar.css"/>
-        <link rel="stylesheet" type="text/css" href="../Css/evo-calendar.midnight-blue.css"/>
-        <link rel="stylesheet" href="../Css/demo.css">
-    <title>Home | genSTEM</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | genSTEM</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700">
+  <link rel="stylesheet" href="../Css/navbar.css">
+  <link rel="stylesheet" href="../Css/main.css">
+  <link rel="stylesheet" href="../Css/index.css">
+  <!--<link rel="stylesheet" href="../Css/carousel.css">-->
+  <link rel="stylesheet" href="../Css/demo.css">
+  <link rel="stylesheet" href="../Css/evo-calendar.css">
+  <link rel="stylesheet" href="../Css/evo-calendar.midnight-blue.css">
+  <script src="../Js/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
-
-    <header>
-        <div class="branding">
-            <a href="../Html/index.html"><img src="../asset/Photos/Icon/nav.png" alt=""></a>
-        </div>
-        <div class="menu-bar">
-        <button class="menu-icon transparent-bg" id="menu-hamburger">
-            <span style="font-size: 1.8rem;"><i class="fas fa-bars"></i></span>
-        </button>
-        <button class="menu-icon transparent-bg" id="menu-close" style="display: none;">
-            <span style="font-size: 1.8rem;"><i class="fas fa-times"></i></span>
-        </button>
-        <nav class="menu-nav">
-            <div class="overlay"></div>
-            <ul class="nav-list">
-            <li class="nav-listitem">About us
-                <span style="margin-left: auto;"><i class="fas fa-caret-down"></i></span>
-                <ul class="nav-listitem-drop">
-                <li><a href="../Html/ourMission.html">Our mission</a></li>
-                <li><a href="../Html/ourTeam.html">Our team</a></li>
-                <li><a href="#">Contact us</a></li>
-                </ul>
-            </li>
-            <li class="nav-listitem"><a href="../Html/OurProject.html">Project</a></li>
-            <li class="nav-listitem"><a href="#">Donate</a></li>
+  <header>
+    <div class="branding">
+      <a href="../Html/navbar.html"><img src="../asset/Photos/Icon/nav.png" alt=""></a>
+    </div>
+    <div class="menu-bar">
+      <button class="menu-icon transparent-bg" id="menu-hamburger">
+        <span style="font-size: 1.8rem;"><i class="fas fa-bars"></i></span>
+      </button>
+      <button class="menu-icon transparent-bg" id="menu-close" style="display: none;">
+        <span style="font-size: 1.8rem;"><i class="fas fa-times"></i></span>
+      </button>
+      <nav class="menu-nav">
+        <div class="overlay"></div>
+        <ul class="nav-list">
+          <li class="nav-listitem">About us
+            <span style="margin-left: auto;"><i class="fas fa-caret-down"></i></span>
+            <ul class="nav-listitem-drop">
+              <li><a href="../Html/ourMission.html">Our mission</a></li>
+              <li><a href="../Html/ourTeam.html">Our team</a></li>
+              <li><a href="#">Contact us</a></li>
             </ul>
-        </nav>
-        </div>
-    </header>
+          </li>
+          <li class="nav-listitem"><a href="#">Project</a></li>
+          <li class="nav-listitem"><a href="#">Donate</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <div id="op-cont" class="container">
-        <div class="text">
-            <div class="header"><h1>GenSTEM</h1></div>
+  <main>
+    <section class="main-head flex-col">
+      <div class="overlay"></div>
+      <div class="main-head flex-col">
+        <div class="slider-content flex-col">
+          <div class="slider-single flex-col active">
+            <img src="../asset/Photos/Virtual Sci ws @ANS/IMG_7466.jpg" alt="1" />
+            <h1>We run Workshops</h1>
+          </div>
+          <div class="slider-single flex-col">
+            <img src="../asset/Photos/Rocket/IMG_7438.jpg" alt="2" />
+            <h1>We raise Awareness</h1>
+          </div>
+          <div class="slider-single flex-col">
+            <img src="../asset/Photos/STEMBOX SS1/IMG_7464.jpg" alt="3" />
+            <h1>We support Resources</h1>
+          </div>
+        </div>
+
+        <div class="bullet-container flex-row">
+          <div class="bullet active" id="bullet-index-0"></div>
+          <div class="bullet" id="bullet-index-1"></div>
+          <div class="bullet" id="bullet-index-2"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="goals flex-col">
+      <div class="problems flex-col">
+        <h1>GenSTEM</h1>
+        <div class="problems-info flex-col">
+          <div class="problems-statement flex-col">
             <p>A youth-led organization aiming to increase access to quality STEM education for youth in underserved communities all over Thailand through hands-on workshops , raising awareness and advocacy.</p>
+            <img src="../asset/Photos/Icon/nav.png">
+          </div>
         </div>
-        <div class="slider">
-            <img class="slider-img" src="../asset/Photos/OP-img/img1.jpg" alt="">
-            <img class="slider-img" src="../asset/Photos/OP-img/img2.jpg" alt="">
-            <img class="slider-img" src="../asset/Photos/OP-img/img3.jpg" alt="">
-        </div>
-    </div>
+      </div>
+    </section>
 
-    <div id="student-container" class="student">
-        <div class="stu-container">
-            <div class="block">
-                <div class="head">STEM Program & Workshops Conducted</div>
-                <div goal="8" class="num">0</div>
+    <section class="problems flex-col">
+      <div class="wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+          <path fill="#F7E6DC" fill-opacity="1" d="M0,64L34.3,96C68.6,128,137,192,206,229.3C274.3,267,343,277,411,266.7C480,256,549,224,617,197.3C685.7,171,754,149,823,122.7C891.4,96,960,64,1029,48C1097.1,32,1166,32,1234,53.3C1302.9,75,1371,117,1406,138.7L1440,160L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
+        </svg>
+      </div>
+      <div class="problems flex-col">
+        <div class="problems-info flex-col">
+          <div class="problems-num flex-row">
+            <div class="flex-col">
+              <p goal="8">0</p>
+              <p>STEM Program & Workshops Conducted</p>
             </div>
-            <div class="block">
-                <div class="head">Volunteers</div>
-                <div class="details">
-                    <div goal="200" class="num">0</div>
-                    <div class="hidden">+</div>
-                </div>
+            <div class="flex-col">
+              <p goal="200">0</p>
+              <p>Volunteers</p>
             </div>
-            <div class="block">
-                <div class="head">Total Impact</div>
-                <div class="details">
-                    <div goal="2500" class="num">0</div>
-                    <div class="hidden">+</div>
-                </div>
+            <div class="flex-col">
+              <p goal="2500">0</p>
+              <p>Total Impact</p>
             </div>
+          </div>
+          <div class="problems-sources flex-row wrap">
+            <span style="padding-right: 1rem;"><strong>STEM:</strong></span>
+            <span>Science</span>
+            <span>Technology</span>
+            <span>Engineering</span>
+            <span>Mathematics</span>
+          </div>
         </div>
-        <div class="student-footer">
-            STEM : Science Technology Engineering Mathematics
-        </div>
-    </div>
+      </div>
+    </section>
+
+    <section class="mission-quote flex-col">
+      <div class="wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+          <path fill="#ccaa88" fill-opacity="1" d="M0,64L34.3,96C68.6,128,137,192,206,229.3C274.3,267,343,277,411,266.7C480,256,549,224,617,197.3C685.7,171,754,149,823,122.7C891.4,96,960,64,1029,48C1097.1,32,1166,32,1234,53.3C1302.9,75,1371,117,1406,138.7L1440,160L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
+        </svg>
+      </div>
+      <div class="mission-quote flex-col">
+        <span><i class="fas fa-quote-left"></i></span>
+        <span><strong>STEM</strong><br>Science Technology Engineering Mathematics</span>
+        <span style="text-align: right;"><i class="fas fa-quote-right"></i></span>
+      </div>
+    </section>
+
+    <section class="sponsors flex-col">
+      <div class="wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+          <path fill="#ffffff" fill-opacity="1" d="M0,64L34.3,96C68.6,128,137,192,206,229.3C274.3,267,343,277,411,266.7C480,256,549,224,617,197.3C685.7,171,754,149,823,122.7C891.4,96,960,64,1029,48C1097.1,32,1166,32,1234,53.3C1302.9,75,1371,117,1406,138.7L1440,160L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
+        </svg>
+      </div>
+      <div class="sponsors flex-col">
+        <h1>Our Sponsors</h1>
+        <ul class="sponsors-logo flex-row">
+          <li><img src="../asset/Photos/Sponsor/amornratgem.jpg" alt=""></li>
+          <li><img src="../asset/Photos/Sponsor/mgold.png" alt=""></li>
+          <li><img src="../asset/Photos/Sponsor/pylon.jpg" alt=""></li>
+        </ul>
+      </div>
+    </section>
 
     <div class="calendar-container">
-        <h1>Calendar</h1>
-        <div id="calendar"></div>
+      <h1>Calendar</h1>
+      <div id="calendar"></div>
     </div>
+  </main>
 
-    <div id="founder-container" class="founder">
-        <h1>Founders</h1>
-        <div class="collection">
-            <div class="profiles">
-                <img class="pro-img" src="" alt="">
-                <p class="details">Founder 1</p>
-            </div>
-            <div class="profiles">
-                <img class="pro-img" src="" alt="">
-                <p class="details">Founder 2</p>
-            </div>
-        </div>
-    </div>
+  <footer>
+    <!-- Messenger ปลั๊กอินแชท Code -->
+    <div id="fb-root"></div>
+    <!-- Your ปลั๊กอินแชท code -->
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "105823355235212");
+      chatbox.setAttribute("attribution", "biz_inbox");
 
-    <footer>
-      <!-- Messenger ปลั๊กอินแชท Code -->
-  <div id="fb-root"></div>
-
-  <!-- Your ปลั๊กอินแชท code -->
-  <div id="fb-customer-chat" class="fb-customerchat"></div>
-
-  <script>
-    var chatbox = document.getElementById('fb-customer-chat');
-    chatbox.setAttribute("page_id", "105823355235212");
-    chatbox.setAttribute("attribution", "biz_inbox");
-
-    window.fbAsyncInit = function() {
+      window.fbAsyncInit = function() {
       FB.init({
-        xfbml            : true,
-        version          : 'v12.0'
+          xfbml            : true,
+          version          : 'v12.0'
       });
-    };
+      };
 
-    (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-  </script>
-        <div class="footer-top">
-        <div class="social-icons">
-            <a target="_blank" href="https://www.facebook.com/Genstemyouth-102506674976308/">
-            <span style="color: white; font-size: 1.7rem;"><i class="fab fa-facebook-f"></i></span>
-            </a>
-            <a target="_blank" href="https://www.instagram.com/genstem.youth/">
-            <span style="color: white; font-size: 1.7rem;"><i class="fab fa-instagram"></i></span>
-            </a>
-            <a target="_blank" href="https://www.tiktok.com/@genstem.youth/">
-            <span style="color: white; font-size: 1.7rem;"><i class="fab fa-tiktok"></i></span>
-            </a>
+      ( function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      } (document, 'script', 'facebook-jssdk') );
+    </script>
+
+    <div class="footer-top">
+      <div class="social-icons">
+        <a target="_blank" href="https://www.facebook.com/Genstemyouth-102506674976308/">
+          <span style="color: white; font-size: 1.7rem;"><i class="fab fa-facebook-f"></i></span>
+        </a>
+        <a target="_blank" href="https://www.instagram.com/genstem.youth/">
+          <span style="color: white; font-size: 1.7rem;"><i class="fab fa-instagram"></i></span>
+        </a>
+        <a target="_blank" href="https://www.tiktok.com/@genstem.youth/">
+          <span style="color: white; font-size: 1.7rem;"><i class="fab fa-tiktok"></i></span>
+        </a>
+      </div>
+      <form class="language-select">
+        <label>Choose language</label>
+        <div class="language-select-option">
+          <select>
+            <option selected value="en">English</option>
+            <option value="th">Thai</option>
+          </select>
+          <button>Apply</button>
         </div>
-        <form class="language-select">
-            <label>Choose language</label>
-            <div class="language-select-option">
-            <select>
-                <option selected value="en">English</option>
-                <option value="th">Thai</option>
-            </select>
-            <button>Apply</button>
-            </div>
-        </form>
-        </div>
-        <hr>
-        <div class="copyright">
-        <p>© 2021 GenSTEM. All rights reserved.</p>
-        </div>
+      </form>
+    </div>
+    <hr>
+    <div class="copyright">
+      <p>© 2021 GenSTEM. All rights reserved.</p>
+    </div>
   </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="../Js/evo-calendar.js"></script>
-        <script src="../Js/demo.js"></script>
-        <script>
-        // initialize your calendar, once the page's DOM is ready
-        $('#calendar').evoCalendar({
-            'theme': 'Midnight Blue',
-         'calendarEvents': [
-              {
-                   id: 'event1', // Event's id (required, for removing event);
-                    name: 'new Year',
-                   description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt corrupti labore animi rerum eveniet at sit, numquam incidunt? Consequuntur sapiente repellat officia, culpa fugiat dicta iure molestias fuga ad dolores? Ex ullam quia fuga ea quis laborum suscipit dicta eos corrupti minima? Dolorem dolorum dicta, officiis eveniet libero nobis debitis temporibus dolor at, repellat nemo quo ad? Culpa a inventore rerum nobis deserunt possimus magni quaerat, voluptates blanditiis neque debitis minus. Iure mollitia ducimus omnis quod error et eligendi culpa assumenda aperiam ex? Aspernatur molestias quo dignissimos odit quisquam perspiciatis veritatis ipsa hic cupiditate sunt, modi eius, excepturi impedit earum.', // Description of event (optional)
-                   date: 'January/1/2021', // Date of event
-                   badge: '1-day event',
-                   type: 'holiday', // Type of event (event|holiday|birthday)
-                   color: '#63d867', // Event custom color (optional)
-                   everyYear: true // Event is every year (optional)
-              }
-            ]
-        });
-    </script>
-    <script src="../Js/navbar.js"></script>
-    <script src="https://kit.fontawesome.com/0ac04e08b1.js" crossorigin="anonymous"></script>
-    <script src="../Js/HomeApp.js"></script>
-    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="../Js/evo-calendar.js"></script>
+  <script src="../Js/demo.js"></script>
+  <script>
+    // initialize your calendar, once the page's DOM is ready
+    $('#calendar').evoCalendar({
+      'theme': 'Midnight Blue',
+      'calendarEvents': [{
+        id: 'event1', // Event's id (required, for removing event);
+        name: 'new Year',
+        description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt corrupti labore animi rerum eveniet at sit, numquam incidunt? Consequuntur sapiente repellat officia, culpa fugiat dicta iure molestias fuga ad dolores? Ex ullam quia fuga ea quis laborum suscipit dicta eos corrupti minima? Dolorem dolorum dicta, officiis eveniet libero nobis debitis temporibus dolor at, repellat nemo quo ad? Culpa a inventore rerum nobis deserunt possimus magni quaerat, voluptates blanditiis neque debitis minus. Iure mollitia ducimus omnis quod error et eligendi culpa assumenda aperiam ex? Aspernatur molestias quo dignissimos odit quisquam perspiciatis veritatis ipsa hic cupiditate sunt, modi eius, excepturi impedit earum.', // Description of event (optional)
+        date: 'January/1/2021', // Date of event
+        badge: '1-day event',
+        type: 'holiday', // Type of event (event|holiday|birthday)
+        color: '#63d867', // Event custom color (optional)
+        everyYear: true // Event is every year (optional)
+       }]
+    });
+  </script>
+  <script src="../Js/navbar.js"></script>
+  <script src="../Js/HomeApp.js"></script>
+  <!--<script src="../Js/carousel.js"></script>-->
+  <script src="https://kit.fontawesome.com/0ac04e08b1.js" crossorigin="anonymous"></script>
+</body>
 </html>
